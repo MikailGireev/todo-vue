@@ -5,7 +5,7 @@ const emit = defineEmits(['completed', 'onDelete']);
 </script>
 
 <template>
-  <li class="todo-item" :class="{ 'todo-item--done': completed }">
+  <li v-auto-animate class="todo-item" :class="{ 'todo-item--done': completed }">
     <div @click="emit('completed')" class="todo-item__status">
       <i class="bi bi-check2"></i>
     </div>

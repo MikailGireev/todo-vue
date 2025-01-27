@@ -9,7 +9,7 @@ const { completedTask, deleteTask } = taskStore;
 </script>
 
 <template>
-  <ul class="todo-list">
+  <ul v-auto-animate class="todo-list">
     <AppTodoItem
       v-for="todo in tasks"
       :key="todo.id"

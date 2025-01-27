@@ -7,6 +7,7 @@ export const useTaskStore = defineStore('tasks', () => {
   const todoLength = computed(() => tasks.value.length);
 
   const addTask = (text: string) => {
+    if (!text) return;
     tasks.value.push({ id: Date.now(), text, completed: false });
   };
 
