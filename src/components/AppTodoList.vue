@@ -4,14 +4,14 @@ import { storeToRefs } from 'pinia';
 import { useTaskStore } from '../stores/todoTask';
 
 const taskStore = useTaskStore();
-const { tasks } = storeToRefs(taskStore);
+const { filteredTasks } = storeToRefs(taskStore);
 const { completedTask, deleteTask } = taskStore;
 </script>
 
 <template>
   <ul v-auto-animate class="todo-list">
     <AppTodoItem
-      v-for="todo in tasks"
+      v-for="todo in filteredTasks"
       :key="todo.id"
       :id="todo.id"
       :text="todo.text"
