@@ -2,6 +2,6 @@
 
 <template>
   <header class="app-header">
-    <span class="logo">TODOS</span>
+    <router-link to="/"><span class="logo">TODOS</span></router-link>
   </header>
 </template>
