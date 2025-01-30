@@ -1,5 +1,8 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --primary-color: #e30808;
@@ -11,6 +14,11 @@
 
 a {
   text-decoration: none;
+  color: var(--default-color);
+}
+
+.color {
+  background-color: #000000;
 }
 
 html {
@@ -64,9 +72,14 @@ button {
 
 .app-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1.6rem;
+}
+
+.app-header__links {
+  display: flex;
+  gap: 10px;
 }
 
 .logo {

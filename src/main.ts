@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage.vue';
 import LoginPage from './pages/LoginPage.vue';
 import RegisterPage from './pages/RegisterPage.vue';
 
+import './assets/index.css';
+
 const app = createApp(App);
 
 const routes = [
