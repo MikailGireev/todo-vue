@@ -4,6 +4,9 @@ import { useTaskStore } from '@/stores/todoTask';
 
 const { addTask } = useTaskStore();
 const newTask = ref('');
+
+
+
 </script>
 
 <template>
