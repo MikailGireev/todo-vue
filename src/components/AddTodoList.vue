@@ -5,8 +5,11 @@ import { useTaskStore } from '@/stores/todoTask';
 const { addTask } = useTaskStore();
 const newTask = ref('');
 
-
-
+const submit = () => {
+  if (!newTask.value.trim()) return;
+  addTask(newTask.value.trim());
+  newTask.value = '';
+};
 </script>
 
 <template>
@@ -21,15 +24,7 @@ const newTask = ref('');
       <div class="text-input text-input--focus">
         <input v-model="newTask" class="input" />
       </div>
-      <button
-        @click.prevent="
-          addTask(newTask);
-          newTask = '';
-        "
-        class="button button--filled"
-      >
-        Add task
-      </button>
+      <button @click.prevent="submit" class="button button--filled">Add task</button>
     </form>
   </section>
 </template>
