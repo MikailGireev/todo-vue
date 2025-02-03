@@ -3,3 +3,12 @@ export interface Todo {
   text: string;
   completed: boolean;
 }
+
+export interface User {
+  token: string;
+  user: {
+    id: number;
+    username: string;
+    password: string;
+  };
+}

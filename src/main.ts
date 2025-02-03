@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage.vue';
 import RegisterPage from './pages/RegisterPage.vue';
 
 import './assets/index.css';
+import { VueQueryPlugin } from '@tanstack/vue-query';
 
 const app = createApp(App);
 
@@ -25,4 +26,5 @@ const router = createRouter({
 app.use(createPinia());
 app.use(router);
 app.use(autoAnimatePlugin);
+app.use(VueQueryPlugin);
 app.mount('#app');

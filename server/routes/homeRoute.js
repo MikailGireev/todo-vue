@@ -28,13 +28,13 @@ const saveTask = async (tasks) => {
 };
 
 export const homeRoute = async (req, res) => {
-  if (req.method === 'GET' && req.url === '/') {
+  if (req.method === 'GET' && req.url === '/api') {
     const todos = await readTask();
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(todos));
   }
 
-  if (req.method === 'POST' && req.url === '/') {
+  if (req.method === 'POST' && req.url === '/api') {
     let body = '';
 
     req.on('data', (chunk) => {
@@ -59,7 +59,7 @@ export const homeRoute = async (req, res) => {
     });
   }
 
-  if (req.method === 'PUT' && req.url === '/') {
+  if (req.method === 'PUT' && req.url === '/api') {
     let body = '';
 
     req.on('data', (chunk) => {
@@ -83,7 +83,7 @@ export const homeRoute = async (req, res) => {
     });
   }
 
-  if (req.method === 'DELETE' && req.url === '/') {
+  if (req.method === 'DELETE' && req.url === '/api') {
     let body = '';
 
     req.on('data', (chunk) => {
