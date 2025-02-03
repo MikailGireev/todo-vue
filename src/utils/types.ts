@@ -12,3 +12,10 @@ export interface User {
     password: string;
   };
 }
+
+export interface Form {
+  username: string;
+  password: string;
+}
+
+export type Filter = 'all' | 'active' | 'done';

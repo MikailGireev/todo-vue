@@ -5,7 +5,6 @@ import { useFilterStore } from './filter';
 
 export const useTaskStore = defineStore('tasks', () => {
   const tasks = ref<Todo[]>([]);
-  const todoLength = computed(() => tasks.value.length);
   const filterStore = useFilterStore();
 
   const loadTasks = async () => {
@@ -62,5 +61,5 @@ export const useTaskStore = defineStore('tasks', () => {
 
   onMounted(loadTasks);
 
-  return { tasks, todoLength, addTask, completedTask, deleteTask, filteredTasks, loadTasks };
+  return { tasks, addTask, completedTask, deleteTask, filteredTasks, loadTasks };
 });
